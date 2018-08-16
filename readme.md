@@ -46,6 +46,38 @@ bundle exec ruby scraper.rb
 
 If you'd like to configure the script to scrape a different part of the website, edit the `scraper.rb` file and point it at a different url (e.g. `http://macintoshgarden.org/apps`)
 
+## How might I use the JSON output?
+
+I use [jq](https://stedolan.github.io/jq/) to query the JSON files on the command line. For example, here is a list of all macintosh games released between 1984 and 1985:
+
+```
+cat macintosh-games.json | jq '.[] | select(.year_released >= 1984 and .year_released <= 1985)'
+```
+
+Results:
+
+```
+{
+  "title": "A Mind Forever Voyaging",
+  "url": "http://macintoshgarden.org/games/a-mind-forever-voyaging",
+  "short_desc": "First you were yanked out of reality and told that your entire life has been a simulation, and that you yourself are a s...",
+  "rating": 4.5,
+  "rating_votes": 0,
+  "categories": [
+    "Interactive Fiction"
+  ],
+  "perspective": [
+    "Text"
+  ],
+  "year_released": 1985,
+  "author": [
+    "Infocom",
+    "Steve Meretzky"
+  ]
+}
+# ... etc ...
+```
+
 ## License
 
 MIT
