@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This contains a [script](scraper.rb) that reades portions of the http://macintoshgarden.org wiki and turns entries there into machine-readable JSON format.
+This contains a [script](scraper.rb) that reads portions of the http://macintoshgarden.org wiki and turns entries there into machine-readable JSON format.
 
 ## What's the output look like?
 
