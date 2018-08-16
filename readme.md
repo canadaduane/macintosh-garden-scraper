@@ -31,7 +31,7 @@ Here's an example:
 ]
 ```
 
-# Do I have to run the script myself?
+## Do I have to run the script myself?
 
 Not necessarily. I was interested in the `games` section of the garden, so I've downloaded and stored the [macintosh-games.json](macintosh-games.json) file in this repository. If you're interested in another section of the garden, you'll need to download, configure, and run the ruby script.
 
