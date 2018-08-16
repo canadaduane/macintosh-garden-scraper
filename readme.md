@@ -2,11 +2,11 @@
 
 ## What is this?
 
-This scrapes the http://macintoshgarden.org wiki and turns entries there into machine-readable json format.
+This contains a [script](scraper.rb) that reades portions of the http://macintoshgarden.org wiki and turns entries there into machine-readable JSON format.
 
 ## What's the output look like?
 
-Here's an example:
+Here's an example, the first entry from [macintosh-games.json](macintosh-games.json):
 
 ```
 [
@@ -48,7 +48,7 @@ If you'd like to configure the script to scrape a different part of the website,
 
 ## How might I use the JSON output?
 
-I use [jq](https://stedolan.github.io/jq/) to query the JSON files on the command line. For example, here is a list of all macintosh games released between 1984 and 1985:
+I use [jq](https://stedolan.github.io/jq/) to query JSON files on the command line. For example, here is a list of all macintosh games released between 1984 and 1985:
 
 ```
 cat macintosh-games.json | jq '.[] | select(.year_released >= 1984 and .year_released <= 1985)'
